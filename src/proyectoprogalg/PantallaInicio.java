@@ -89,7 +89,7 @@ public class PantallaInicio extends javax.swing.JFrame {
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 0)));
 
         jLabel2.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
-        jLabel2.setText("Inserte el tamaño de la Matriz:");
+        jLabel2.setText("Inserte el orden de la Matriz:");
 
         jTextField1.setBackground(new java.awt.Color(153, 204, 255));
 
