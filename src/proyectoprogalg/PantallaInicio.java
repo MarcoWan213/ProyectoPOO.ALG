@@ -19,7 +19,7 @@ public class PantallaInicio extends javax.swing.JFrame {
      */
     public PantallaInicio() {
         initComponents();
-        this.getContentPane().setBackground(Color.blue);
+        this.getContentPane().setBackground(Color.gray);
         this.setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -113,7 +113,7 @@ public class PantallaInicio extends javax.swing.JFrame {
         });
 
         m11.setEditable(false);
-        m11.setBackground(java.awt.Color.blue);
+        m11.setBackground(java.awt.Color.gray);
         m11.setBorder(null);
         m11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,63 +122,63 @@ public class PantallaInicio extends javax.swing.JFrame {
         });
 
         m12.setEditable(false);
-        m12.setBackground(java.awt.Color.blue);
+        m12.setBackground(java.awt.Color.gray);
         m12.setBorder(null);
 
         m14.setEditable(false);
-        m14.setBackground(java.awt.Color.blue);
+        m14.setBackground(java.awt.Color.gray);
         m14.setBorder(null);
 
         m13.setEditable(false);
-        m13.setBackground(java.awt.Color.blue);
+        m13.setBackground(java.awt.Color.gray);
         m13.setBorder(null);
 
         m21.setEditable(false);
-        m21.setBackground(java.awt.Color.blue);
+        m21.setBackground(java.awt.Color.gray);
         m21.setBorder(null);
 
         m22.setEditable(false);
-        m22.setBackground(java.awt.Color.blue);
+        m22.setBackground(java.awt.Color.gray);
         m22.setBorder(null);
 
         m23.setEditable(false);
-        m23.setBackground(java.awt.Color.blue);
+        m23.setBackground(java.awt.Color.gray);
         m23.setBorder(null);
 
         m24.setEditable(false);
-        m24.setBackground(java.awt.Color.blue);
+        m24.setBackground(java.awt.Color.gray);
         m24.setBorder(null);
 
         m31.setEditable(false);
-        m31.setBackground(java.awt.Color.blue);
+        m31.setBackground(java.awt.Color.gray);
         m31.setBorder(null);
 
         m32.setEditable(false);
-        m32.setBackground(java.awt.Color.blue);
+        m32.setBackground(java.awt.Color.gray);
         m32.setBorder(null);
 
         m33.setEditable(false);
-        m33.setBackground(java.awt.Color.blue);
+        m33.setBackground(java.awt.Color.gray);
         m33.setBorder(null);
 
         m34.setEditable(false);
-        m34.setBackground(java.awt.Color.blue);
+        m34.setBackground(java.awt.Color.gray);
         m34.setBorder(null);
 
         m41.setEditable(false);
-        m41.setBackground(java.awt.Color.blue);
+        m41.setBackground(java.awt.Color.gray);
         m41.setBorder(null);
 
         m42.setEditable(false);
-        m42.setBackground(java.awt.Color.blue);
+        m42.setBackground(java.awt.Color.gray);
         m42.setBorder(null);
 
         m44.setEditable(false);
-        m44.setBackground(java.awt.Color.blue);
+        m44.setBackground(java.awt.Color.gray);
         m44.setBorder(null);
 
         m43.setEditable(false);
-        m43.setBackground(java.awt.Color.blue);
+        m43.setBackground(java.awt.Color.gray);
         m43.setBorder(null);
 
         jButton5.setText("Realizar");
