@@ -15,7 +15,7 @@ import java.awt.event.MouseEvent;
 public class PantallaInicio extends javax.swing.JFrame {
 
     /**
-     * Creates new form PantallaInicio
+     * Creates new form LupitaLaCascabel y AlondraLaMambaMorenaza y YoSoyELCulebron
      */
     public PantallaInicio() {
         initComponents();
