@@ -333,10 +333,13 @@ public class PantallaInicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
+        //Boton para crear la tabla
+        
+        //Escribe el numero en grande
         String numM = jTextField1.getText();
         numMatriz.setText(numM);
         
+        //Metodo que "crea la tabla"
         apareceTabla();
 
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -430,7 +433,7 @@ public class PantallaInicio extends javax.swing.JFrame {
                 m12.setEditable(true);
                 m21.setEditable(true);
                 m22.setEditable(true);
-                //Añade los bordes y un color diferente para que sea visible
+                //Añade los bordes 
                 m11.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
                 m12.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
                 m21.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
@@ -443,6 +446,7 @@ public class PantallaInicio extends javax.swing.JFrame {
 
                 break;
             case 3:
+                //Vuelve editable los TextFields
                 m11.setEditable(true);
                 m12.setEditable(true);
                 m13.setEditable(true);
@@ -452,12 +456,34 @@ public class PantallaInicio extends javax.swing.JFrame {
                 m31.setEditable(true);
                 m32.setEditable(true);
                 m33.setEditable(true);
-                m41.setEditable(true);
-                m42.setEditable(true);
-                m43.setEditable(true);
-
+               
+                //Añadir los bordes (Pendiente
+                m11.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m12.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m13.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m21.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m22.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m23.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m31.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m32.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m33.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                //cambia el color del fondo de las celdas
+                m11.setBackground(Color.white);
+                m12.setBackground(Color.white);
+                m13.setBackground(Color.white);
+                m14.setBackground(Color.white);
+                m21.setBackground(Color.white);
+                m22.setBackground(Color.white);
+                m23.setBackground(Color.white);
+                m24.setBackground(Color.white);
+                m31.setBackground(Color.white);
+                m32.setBackground(Color.white);
+                m33.setBackground(Color.white);
+             
+               
                 break;
             case 4:
+                //Vuelve editable los TextFields
                 m11.setEditable(true);
                 m12.setEditable(true);
                 m13.setEditable(true);
@@ -474,6 +500,43 @@ public class PantallaInicio extends javax.swing.JFrame {
                 m42.setEditable(true);
                 m43.setEditable(true);
                 m44.setEditable(true);
+                //Añadir los bordes (Pendiente
+                m11.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m12.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m13.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m14.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m21.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m22.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m23.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m24.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m31.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m32.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m33.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m34.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m41.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m42.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m43.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                m44.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
+                //cambia el color del fondo de las celdas
+                 m11.setBackground(Color.white);
+                m12.setBackground(Color.white);
+                m13.setBackground(Color.white);
+                m14.setBackground(Color.white);
+                m21.setBackground(Color.white);
+                m22.setBackground(Color.white);
+                m23.setBackground(Color.white);
+                m24.setBackground(Color.white);
+                m31.setBackground(Color.white);
+                m32.setBackground(Color.white);
+                m33.setBackground(Color.white);
+                m34.setBackground(Color.white);
+                m41.setBackground(Color.white);
+                m42.setBackground(Color.white);
+                m43.setBackground(Color.white);
+                m44.setBackground(Color.white);
+                
+                
+                
         }
     }
 
