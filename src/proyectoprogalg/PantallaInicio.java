@@ -15,7 +15,8 @@ import java.awt.event.MouseEvent;
 public class PantallaInicio extends javax.swing.JFrame {
 
     /**
-     * Creates new form LupitaLaCascabel y AlondraLaMambaMorenaza y YoSoyELCulebron
+     * Creates new form LupitaLaCascabel y AlondraLaMambaMorenaza y
+     * YoSoyELCulebron
      */
     public PantallaInicio() {
         initComponents();
@@ -23,7 +24,6 @@ public class PantallaInicio extends javax.swing.JFrame {
         this.setExtendedState(MAXIMIZED_BOTH);
     }
 
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -333,14 +333,19 @@ public class PantallaInicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+        //Metodo borrar tabla
+        despintarTabla();
+        despBorder();
         //Boton para crear la tabla
-        
+
         //Escribe el numero en grande
         String numM = jTextField1.getText();
         numMatriz.setText(numM);
-        
+
         //Metodo que "crea la tabla"
         apareceTabla();
+
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -361,9 +366,8 @@ public class PantallaInicio extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         //Boton para procedimientos de la realizacion de la matriz por el metodo de Kramer
-        
-            
-        
+
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
@@ -421,7 +425,25 @@ public class PantallaInicio extends javax.swing.JFrame {
 
     }
 
-    
+    void despintarTabla() {
+        m11.setBackground(Color.gray);
+        m12.setBackground(Color.gray);
+        m13.setBackground(Color.gray);
+        m14.setBackground(Color.gray);
+        m21.setBackground(Color.gray);
+        m22.setBackground(Color.gray);
+        m23.setBackground(Color.gray);
+        m24.setBackground(Color.gray);
+        m31.setBackground(Color.gray);
+        m32.setBackground(Color.gray);
+        m33.setBackground(Color.gray);
+        m34.setBackground(Color.gray);
+        m41.setBackground(Color.gray);
+        m42.setBackground(Color.gray);
+        m43.setBackground(Color.gray);
+        m44.setBackground(Color.gray);
+    }
+
     //Metodo que hace la ilucion de que aparece la tabla
     void apareceTabla() {
         int x = Integer.parseInt(jTextField1.getText());
@@ -456,7 +478,7 @@ public class PantallaInicio extends javax.swing.JFrame {
                 m31.setEditable(true);
                 m32.setEditable(true);
                 m33.setEditable(true);
-               
+
                 //Añadir los bordes (Pendiente
                 m11.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
                 m12.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
@@ -471,16 +493,13 @@ public class PantallaInicio extends javax.swing.JFrame {
                 m11.setBackground(Color.white);
                 m12.setBackground(Color.white);
                 m13.setBackground(Color.white);
-                m14.setBackground(Color.white);
                 m21.setBackground(Color.white);
                 m22.setBackground(Color.white);
                 m23.setBackground(Color.white);
-                m24.setBackground(Color.white);
                 m31.setBackground(Color.white);
                 m32.setBackground(Color.white);
                 m33.setBackground(Color.white);
-             
-               
+
                 break;
             case 4:
                 //Vuelve editable los TextFields
@@ -518,7 +537,7 @@ public class PantallaInicio extends javax.swing.JFrame {
                 m43.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
                 m44.setBorder(javax.swing.BorderFactory.createLineBorder(Color.red));
                 //cambia el color del fondo de las celdas
-                 m11.setBackground(Color.white);
+                m11.setBackground(Color.white);
                 m12.setBackground(Color.white);
                 m13.setBackground(Color.white);
                 m14.setBackground(Color.white);
@@ -534,9 +553,7 @@ public class PantallaInicio extends javax.swing.JFrame {
                 m42.setBackground(Color.white);
                 m43.setBackground(Color.white);
                 m44.setBackground(Color.white);
-                
-                
-                
+
         }
     }
 
