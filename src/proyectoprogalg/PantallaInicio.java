@@ -6,7 +6,13 @@
 package proyectoprogalg;
 
 import java.awt.Color;
+import java.awt.TextField;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+import java.util.Iterator;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
@@ -401,7 +407,44 @@ public class PantallaInicio extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         //Boton para procedimientos de la realizacion de la matriz por el metodo de Kramer
+        int tamaño = Integer.parseInt(numMatriz.getText());
+        int matriz[][] = new int[tamaño][tamaño];
 
+        switch (tamaño) {
+            case 4:
+                matriz[3][0] = Integer.parseInt(m41.getText());
+                matriz[3][1] = Integer.parseInt(m42.getText());
+                matriz[3][2] = Integer.parseInt(m43.getText());
+                matriz[3][3] = Integer.parseInt(m44.getText());
+                matriz[0][3] = Integer.parseInt(m14.getText());
+                matriz[1][3] = Integer.parseInt(m24.getText());
+                matriz[2][3] = Integer.parseInt(m34.getText());
+                matriz[3][3] = Integer.parseInt(m44.getText());
+            case 3:
+                matriz[2][0] = Integer.parseInt(m31.getText());
+                matriz[2][1] = Integer.parseInt(m32.getText());
+                matriz[2][2] = Integer.parseInt(m33.getText());
+                matriz[0][2] = Integer.parseInt(m13.getText());
+                matriz[1][2] = Integer.parseInt(m23.getText());
+            case 2:
+                matriz[1][0] = Integer.parseInt(m21.getText());
+                matriz[1][1] = Integer.parseInt(m22.getText());
+                matriz[0][0] = Integer.parseInt(m11.getText());
+                matriz[0][1] = Integer.parseInt(m12.getText());
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "Algo salio mal");
+
+        }
+
+        JOptionPane.showMessageDialog(null, matriz[0][0]);
+        JOptionPane.showMessageDialog(null, matriz[0][1]);
+        JOptionPane.showMessageDialog(null, matriz[1][0]);
+        JOptionPane.showMessageDialog(null, matriz[1][1]);
+        
+        int det = (matriz[0][0]*matriz[1][1])-(matriz[0][1]*matriz[1][0]);
+        
+        JOptionPane.showMessageDialog(null, det);
 
     }//GEN-LAST:event_jButton5ActionPerformed
 
