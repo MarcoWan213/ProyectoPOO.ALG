@@ -440,14 +440,8 @@ public class PantallaInicio extends javax.swing.JFrame {
 
         }
 
-        JOptionPane.showMessageDialog(null, matriz[0][0]);
-        JOptionPane.showMessageDialog(null, matriz[0][1]);
-        JOptionPane.showMessageDialog(null, matriz[1][0]);
-        JOptionPane.showMessageDialog(null, matriz[1][1]);
-
-        int det = (matriz[0][0] * matriz[1][1]) - (matriz[0][1] * matriz[1][0]);
-
-        JOptionPane.showMessageDialog(null, det);
+         
+        
 
     }//GEN-LAST:event_jButton5ActionPerformed
 
