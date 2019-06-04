@@ -28,6 +28,8 @@ public class PantallaInicio extends javax.swing.JFrame {
         initComponents();
         this.getContentPane().setBackground(Color.gray);
         this.setExtendedState(MAXIMIZED_BOTH);
+        despintarTabla();
+
     }
 
     @SuppressWarnings("unchecked")
@@ -126,7 +128,7 @@ public class PantallaInicio extends javax.swing.JFrame {
         });
 
         m11.setEditable(false);
-        m11.setBackground(java.awt.Color.gray);
+        m11.setBackground(java.awt.Color.darkGray);
         m11.setBorder(null);
         m11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,7 +137,7 @@ public class PantallaInicio extends javax.swing.JFrame {
         });
 
         m12.setEditable(false);
-        m12.setBackground(java.awt.Color.gray);
+        m12.setBackground(java.awt.Color.red);
         m12.setBorder(null);
 
         m14.setEditable(false);
@@ -403,6 +405,7 @@ public class PantallaInicio extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -441,9 +444,9 @@ public class PantallaInicio extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, matriz[0][1]);
         JOptionPane.showMessageDialog(null, matriz[1][0]);
         JOptionPane.showMessageDialog(null, matriz[1][1]);
-        
-        int det = (matriz[0][0]*matriz[1][1])-(matriz[0][1]*matriz[1][0]);
-        
+
+        int det = (matriz[0][0] * matriz[1][1]) - (matriz[0][1] * matriz[1][0]);
+
         JOptionPane.showMessageDialog(null, det);
 
     }//GEN-LAST:event_jButton5ActionPerformed
@@ -520,22 +523,22 @@ public class PantallaInicio extends javax.swing.JFrame {
     }
 
     void despintarTabla() {
-        m11.setBackground(Color.gray);
-        m12.setBackground(Color.gray);
-        m13.setBackground(Color.gray);
-        m14.setBackground(Color.gray);
-        m21.setBackground(Color.gray);
-        m22.setBackground(Color.gray);
-        m23.setBackground(Color.gray);
-        m24.setBackground(Color.gray);
-        m31.setBackground(Color.gray);
-        m32.setBackground(Color.gray);
-        m33.setBackground(Color.gray);
-        m34.setBackground(Color.gray);
-        m41.setBackground(Color.gray);
-        m42.setBackground(Color.gray);
-        m43.setBackground(Color.gray);
-        m44.setBackground(Color.gray);
+        m11.setBackground(new Color(0, 0, 0, 0));
+        m12.setBackground(new Color(0, 0, 0, 0));
+        m13.setBackground(new Color(0, 0, 0, 0));
+        m14.setBackground(new Color(0, 0, 0, 0));
+        m21.setBackground(new Color(0, 0, 0, 0));
+        m22.setBackground(new Color(0, 0, 0, 0));
+        m23.setBackground(new Color(0, 0, 0, 0));
+        m24.setBackground(new Color(0, 0, 0, 0));
+        m31.setBackground(new Color(0, 0, 0, 0));
+        m32.setBackground(new Color(0, 0, 0, 0));
+        m33.setBackground(new Color(0, 0, 0, 0));
+        m34.setBackground(new Color(0, 0, 0, 0));
+        m41.setBackground(new Color(0, 0, 0, 0));
+        m42.setBackground(new Color(0, 0, 0, 0));
+        m43.setBackground(new Color(0, 0, 0, 0));
+        m44.setBackground(new Color(0, 0, 0, 0));
     }
 
     //Metodo que hace la ilucion de que aparece la tabla
