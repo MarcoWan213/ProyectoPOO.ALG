@@ -10,8 +10,13 @@ import java.awt.TextField;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Iterator;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JLayeredPane;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
@@ -71,7 +76,7 @@ public class PantallaInicio extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         numMatriz = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        Procedimiento = new javax.swing.JButton();
 
         jRadioButton2.setText("jRadioButton2");
 
@@ -214,10 +219,24 @@ public class PantallaInicio extends javax.swing.JFrame {
             }
         });
 
-        jButton8.setText("Procedimiento");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        Procedimiento.setText("Procedimiento");
+        Procedimiento.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                ProcedimientoAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        Procedimiento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ProcedimientoMouseClicked(evt);
+            }
+        });
+        Procedimiento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                ProcedimientoActionPerformed(evt);
             }
         });
 
@@ -296,7 +315,7 @@ public class PantallaInicio extends javax.swing.JFrame {
                         .addGap(28, 28, 28))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Procedimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
         );
         layout.setVerticalGroup(
@@ -357,8 +376,8 @@ public class PantallaInicio extends javax.swing.JFrame {
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addComponent(Procedimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton7)
                 .addGap(7, 7, 7)
@@ -440,8 +459,14 @@ public class PantallaInicio extends javax.swing.JFrame {
 
         }
 
-         
-        
+        JOptionPane.showMessageDialog(null, matriz[0][0]);
+        JOptionPane.showMessageDialog(null, matriz[0][1]);
+        JOptionPane.showMessageDialog(null, matriz[1][0]);
+        JOptionPane.showMessageDialog(null, matriz[1][1]);
+
+        int det = (matriz[0][0] * matriz[1][1]) - (matriz[0][1] * matriz[1][0]);
+
+        JOptionPane.showMessageDialog(null, det);
 
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -451,15 +476,27 @@ public class PantallaInicio extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // Boton para la pantalla de resultado
-        Resultado obj2=new Resultado();
+        Resultado obj2 = new Resultado();
         obj2.setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void ProcedimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProcedimientoActionPerformed
         // Boton para la pantalla de procedimiento
-        Procedimiento obj1=new Procedimiento();
-        obj1.setVisible(true);
-    }//GEN-LAST:event_jButton8ActionPerformed
+        Procedimiento pro = new Procedimiento();
+        pro.setVisible(true);
+
+
+    }//GEN-LAST:event_ProcedimientoActionPerformed
+
+    private void ProcedimientoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProcedimientoMouseClicked
+        // TODO add your handling code here:
+
+
+    }//GEN-LAST:event_ProcedimientoMouseClicked
+
+    private void ProcedimientoAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_ProcedimientoAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProcedimientoAncestorAdded
 
     /**
      * @param args the command line arguments
@@ -650,13 +687,13 @@ public class PantallaInicio extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Procedimiento;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel14;
