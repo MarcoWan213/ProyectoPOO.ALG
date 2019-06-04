@@ -10,13 +10,8 @@ import java.awt.TextField;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Iterator;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JLayeredPane;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
@@ -33,8 +28,6 @@ public class PantallaInicio extends javax.swing.JFrame {
         initComponents();
         this.getContentPane().setBackground(Color.gray);
         this.setExtendedState(MAXIMIZED_BOTH);
-        despintarTabla();
-
     }
 
     @SuppressWarnings("unchecked")
@@ -76,7 +69,7 @@ public class PantallaInicio extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         numMatriz = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
-        Procedimiento = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
 
         jRadioButton2.setText("jRadioButton2");
 
@@ -133,7 +126,7 @@ public class PantallaInicio extends javax.swing.JFrame {
         });
 
         m11.setEditable(false);
-        m11.setBackground(java.awt.Color.darkGray);
+        m11.setBackground(java.awt.Color.gray);
         m11.setBorder(null);
         m11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,7 +135,7 @@ public class PantallaInicio extends javax.swing.JFrame {
         });
 
         m12.setEditable(false);
-        m12.setBackground(java.awt.Color.red);
+        m12.setBackground(java.awt.Color.gray);
         m12.setBorder(null);
 
         m14.setEditable(false);
@@ -219,24 +212,10 @@ public class PantallaInicio extends javax.swing.JFrame {
             }
         });
 
-        Procedimiento.setText("Procedimiento");
-        Procedimiento.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                ProcedimientoAncestorAdded(evt);
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-        Procedimiento.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ProcedimientoMouseClicked(evt);
-            }
-        });
-        Procedimiento.addActionListener(new java.awt.event.ActionListener() {
+        jButton8.setText("Procedimiento");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProcedimientoActionPerformed(evt);
+                jButton8ActionPerformed(evt);
             }
         });
 
@@ -315,7 +294,7 @@ public class PantallaInicio extends javax.swing.JFrame {
                         .addGap(28, 28, 28))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Procedimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
         );
         layout.setVerticalGroup(
@@ -376,8 +355,8 @@ public class PantallaInicio extends javax.swing.JFrame {
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addComponent(Procedimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton7)
                 .addGap(7, 7, 7)
@@ -424,7 +403,6 @@ public class PantallaInicio extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
-
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -463,9 +441,9 @@ public class PantallaInicio extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, matriz[0][1]);
         JOptionPane.showMessageDialog(null, matriz[1][0]);
         JOptionPane.showMessageDialog(null, matriz[1][1]);
-
-        int det = (matriz[0][0] * matriz[1][1]) - (matriz[0][1] * matriz[1][0]);
-
+        
+        int det = (matriz[0][0]*matriz[1][1])-(matriz[0][1]*matriz[1][0]);
+        
         JOptionPane.showMessageDialog(null, det);
 
     }//GEN-LAST:event_jButton5ActionPerformed
@@ -476,27 +454,15 @@ public class PantallaInicio extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // Boton para la pantalla de resultado
-        Resultado obj2 = new Resultado();
+        Resultado obj2=new Resultado();
         obj2.setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void ProcedimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProcedimientoActionPerformed
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // Boton para la pantalla de procedimiento
-        Procedimiento pro = new Procedimiento();
-        pro.setVisible(true);
-
-
-    }//GEN-LAST:event_ProcedimientoActionPerformed
-
-    private void ProcedimientoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProcedimientoMouseClicked
-        // TODO add your handling code here:
-
-
-    }//GEN-LAST:event_ProcedimientoMouseClicked
-
-    private void ProcedimientoAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_ProcedimientoAncestorAdded
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ProcedimientoAncestorAdded
+        Procedimiento obj1=new Procedimiento();
+        obj1.setVisible(true);
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -554,22 +520,22 @@ public class PantallaInicio extends javax.swing.JFrame {
     }
 
     void despintarTabla() {
-        m11.setBackground(new Color(0, 0, 0, 0));
-        m12.setBackground(new Color(0, 0, 0, 0));
-        m13.setBackground(new Color(0, 0, 0, 0));
-        m14.setBackground(new Color(0, 0, 0, 0));
-        m21.setBackground(new Color(0, 0, 0, 0));
-        m22.setBackground(new Color(0, 0, 0, 0));
-        m23.setBackground(new Color(0, 0, 0, 0));
-        m24.setBackground(new Color(0, 0, 0, 0));
-        m31.setBackground(new Color(0, 0, 0, 0));
-        m32.setBackground(new Color(0, 0, 0, 0));
-        m33.setBackground(new Color(0, 0, 0, 0));
-        m34.setBackground(new Color(0, 0, 0, 0));
-        m41.setBackground(new Color(0, 0, 0, 0));
-        m42.setBackground(new Color(0, 0, 0, 0));
-        m43.setBackground(new Color(0, 0, 0, 0));
-        m44.setBackground(new Color(0, 0, 0, 0));
+        m11.setBackground(Color.gray);
+        m12.setBackground(Color.gray);
+        m13.setBackground(Color.gray);
+        m14.setBackground(Color.gray);
+        m21.setBackground(Color.gray);
+        m22.setBackground(Color.gray);
+        m23.setBackground(Color.gray);
+        m24.setBackground(Color.gray);
+        m31.setBackground(Color.gray);
+        m32.setBackground(Color.gray);
+        m33.setBackground(Color.gray);
+        m34.setBackground(Color.gray);
+        m41.setBackground(Color.gray);
+        m42.setBackground(Color.gray);
+        m43.setBackground(Color.gray);
+        m44.setBackground(Color.gray);
     }
 
     //Metodo que hace la ilucion de que aparece la tabla
@@ -687,13 +653,13 @@ public class PantallaInicio extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Procedimiento;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel14;
