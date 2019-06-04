@@ -33,7 +33,7 @@ public class PantallaInicio extends javax.swing.JFrame {
         initComponents();
         //this.getContentPane().setBackground(Color.gray);
         //this.setExtendedState(MAXIMIZED_BOTH);
-        
+        despintarTabla();
         ((JPanel)getContentPane()).setOpaque(false);
         ImageIcon uno=new ImageIcon(this.getClass().getResource("/imagenes/fondo.jpg"));
         JLabel fondo= new JLabel();
@@ -561,22 +561,22 @@ public class PantallaInicio extends javax.swing.JFrame {
     }
 
     void despintarTabla() {
-        m11.setBackground(Color.gray);
-        m12.setBackground(Color.gray);
-        m13.setBackground(Color.gray);
-        m14.setBackground(Color.gray);
-        m21.setBackground(Color.gray);
-        m22.setBackground(Color.gray);
-        m23.setBackground(Color.gray);
-        m24.setBackground(Color.gray);
-        m31.setBackground(Color.gray);
-        m32.setBackground(Color.gray);
-        m33.setBackground(Color.gray);
-        m34.setBackground(Color.gray);
-        m41.setBackground(Color.gray);
-        m42.setBackground(Color.gray);
-        m43.setBackground(Color.gray);
-        m44.setBackground(Color.gray);
+        m11.setBackground(new Color(0,0,0,0));
+        m12.setBackground(new Color(0,0,0,0));
+        m13.setBackground(new Color(0,0,0,0));
+        m14.setBackground(new Color(0,0,0,0));
+        m21.setBackground(new Color(0,0,0,0));
+        m22.setBackground(new Color(0,0,0,0));
+        m23.setBackground(new Color(0,0,0,0));
+        m24.setBackground(new Color(0,0,0,0));
+        m31.setBackground(new Color(0,0,0,0));
+        m32.setBackground(new Color(0,0,0,0));
+        m33.setBackground(new Color(0,0,0,0));
+        m34.setBackground(new Color(0,0,0,0));
+        m41.setBackground(new Color(0,0,0,0));
+        m42.setBackground(new Color(0,0,0,0));
+        m43.setBackground(new Color(0,0,0,0));
+        m44.setBackground(new Color(0,0,0,0));
     }
 
     //Metodo que hace la ilucion de que aparece la tabla
