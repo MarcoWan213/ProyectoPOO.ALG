@@ -34,15 +34,13 @@ public class PantallaInicio extends javax.swing.JFrame {
         //this.getContentPane().setBackground(Color.gray);
         //this.setExtendedState(MAXIMIZED_BOTH);
         despintarTabla();
-        ((JPanel)getContentPane()).setOpaque(false);
-        ImageIcon uno=new ImageIcon(this.getClass().getResource("/imagenes/fondo.jpg"));
-        JLabel fondo= new JLabel();
+        ((JPanel) getContentPane()).setOpaque(false);
+        ImageIcon uno = new ImageIcon(this.getClass().getResource("/imagenes/fondo.jpg"));
+        JLabel fondo = new JLabel();
         fondo.setIcon(uno);
-        getLayeredPane().add(fondo,JLayeredPane.FRAME_CONTENT_LAYER);
-        fondo.setBounds(0,0,uno.getIconWidth(),uno.getIconHeight());
-        
-        
-        
+        getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
+        fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
+
     }
 
     @SuppressWarnings("unchecked")
@@ -465,15 +463,12 @@ public class PantallaInicio extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Algo salio mal");
 
         }
-
-        JOptionPane.showMessageDialog(null, matriz[0][0]);
-        JOptionPane.showMessageDialog(null, matriz[0][1]);
-        JOptionPane.showMessageDialog(null, matriz[1][0]);
-        JOptionPane.showMessageDialog(null, matriz[1][1]);
-
-        int det = (matriz[0][0] * matriz[1][1]) - (matriz[0][1] * matriz[1][0]);
-
-        JOptionPane.showMessageDialog(null, det);
+    
+        int det;
+        
+        det = determinanteMatriz(matriz, 4);
+        
+        System.out.println(det);
 
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -561,23 +556,65 @@ public class PantallaInicio extends javax.swing.JFrame {
     }
 
     void despintarTabla() {
-        m11.setBackground(new Color(0,0,0,0));
-        m12.setBackground(new Color(0,0,0,0));
-        m13.setBackground(new Color(0,0,0,0));
-        m14.setBackground(new Color(0,0,0,0));
-        m21.setBackground(new Color(0,0,0,0));
-        m22.setBackground(new Color(0,0,0,0));
-        m23.setBackground(new Color(0,0,0,0));
-        m24.setBackground(new Color(0,0,0,0));
-        m31.setBackground(new Color(0,0,0,0));
-        m32.setBackground(new Color(0,0,0,0));
-        m33.setBackground(new Color(0,0,0,0));
-        m34.setBackground(new Color(0,0,0,0));
-        m41.setBackground(new Color(0,0,0,0));
-        m42.setBackground(new Color(0,0,0,0));
-        m43.setBackground(new Color(0,0,0,0));
-        m44.setBackground(new Color(0,0,0,0));
+        m11.setBackground(new Color(0, 0, 0, 0));
+        m12.setBackground(new Color(0, 0, 0, 0));
+        m13.setBackground(new Color(0, 0, 0, 0));
+        m14.setBackground(new Color(0, 0, 0, 0));
+        m21.setBackground(new Color(0, 0, 0, 0));
+        m22.setBackground(new Color(0, 0, 0, 0));
+        m23.setBackground(new Color(0, 0, 0, 0));
+        m24.setBackground(new Color(0, 0, 0, 0));
+        m31.setBackground(new Color(0, 0, 0, 0));
+        m32.setBackground(new Color(0, 0, 0, 0));
+        m33.setBackground(new Color(0, 0, 0, 0));
+        m34.setBackground(new Color(0, 0, 0, 0));
+        m41.setBackground(new Color(0, 0, 0, 0));
+        m42.setBackground(new Color(0, 0, 0, 0));
+        m43.setBackground(new Color(0, 0, 0, 0));
+        m44.setBackground(new Color(0, 0, 0, 0));
     }
+
+    public static int determinanteMatriz(int x[][], int N) {
+        int det = 0;
+        switch (N) {
+            case 2:
+                det = ((x[0][0] * x[1][1]) - (x[1][0] * x[0][1]));
+                break;
+            case 3:	//Método de Gauss
+                det = ((x[0][0]) * (x[1][1]) * (x[2][2]) + (x[1][0]) * (x[2][1]) * (x[0][2]) + (x[2][0]) * (x[0][1]) * (x[1][2])) - ((x[2][0]) * (x[1][1]) * (x[0][2]) + (x[1][0]) * (x[0][1]) * (x[2][2]) + (x[0][0]) * (x[2][1]) * (x[1][2]));
+                break;
+            default:	//Desarrollo a partir de los elementos de una fila/columna			
+                for (int z = 0; z < x.length; z++) {
+                    det += (x[z][0] * adj(x, z, 0));
+                }
+        }
+        return det;
+    }
+    
+    public static int adj(int x[][], int i, int j){
+		int adjunto;
+		int y[][]=new int[x.length-1][x.length-1];
+		int m,n;
+		for(int k=0;k<y.length;k++){	
+			if(k<i){							
+				m=k;
+			}
+			else{
+				m=k+1;
+			}
+			for(int l=0;l<y.length;l++){
+				if(l<j){
+					n=l;
+				}
+				else{
+					n=l+1;
+				}
+				y[k][l]=x[m][n];
+			}
+		}
+		adjunto=(int)Math.pow(-1,i+j)*determinanteMatriz(y, y.length);		
+		return adjunto;																	
+	}
 
     //Metodo que hace la ilucion de que aparece la tabla
     void apareceTabla() {
